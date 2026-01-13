@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link rel="stylesheet" href="css/login.css">
+
+    <script>
+        function DisplayResults() {
+
+          const email = document.forms["detail"]["email"].value;
+          const password = document.forms["detail"]["password"].value;
+          const errorMessageDiv = document.getElementById("errormessage");
+        
+          errorMessageDiv.innerHTML = "";
+      
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailPattern.test(email)) {
+            errorMessageDiv.innerHTML = "<p style='color:white;'>Please enter valid email</p>";
+            return false; 
+          }         
+          const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+          if (!passwordPattern.test(password)) {
+            errorMessageDiv.innerHTML = "<p style='color:white;'>Please enter valid Passworld</p>";
+            return false; 
+          }
+          
+          window.location.href = "home.html";
+          return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="login-div">
+      <form class="login" onsubmit="return DisplayResults()" name="detail" autocomplete="off">
+        <h1 class="login">Login </h1>
+
+        <div class="input-text">
+            <p >Email</p>
+            <input type="email" name="email" placeholder="Email" />
+        </div>
+
+        <div class="input-text">
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Password" />
+        </div>
+
+        <div id="errormessage"></div>
+
+        <input class="login-button" type="submit" value="Login " />
+       
+        <div class="forget-password">
+            <a class="" href="" >Forget password?</a>
+            <a class="" href="Signup.html" >Sign Up?</a>
+        </div>
+      </form>
+    </div>
+
+   
+</body>
+</html>

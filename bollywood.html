@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.min.js"></script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script>
+      function logout(){
+        window.location.replace("login.html");
+      }
+    </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" ><STRong>Movies Hub</STRong></a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" ></button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link " href="home.html">home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="movies.html"  id="navbarDropdown" role="button" data-bs-toggle="dropdown" >Movies</a>
+            <ul class="dropdown-menu " style="background-color:#000; color:white; border:1px solid gray " >
+              <li><a class="dropdown-item" href="hollywood.html" >Hollywood</a></li>
+              <li><a class="dropdown-item" href="bollywood.html" >Bollywood</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="web_series.html" >Web Series</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="anime.html" >Anime</a>
+          </li>
+
+          <li class="nav-item">
+            <form class="d-flex">
+              <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-danger" type="submit">Search</button>
+            </form>
+          </li>
+
+          <li class="nav-item">
+            <button class="btn btn-light logout-btn" onclick="logout()">Logout</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+        <!-- carousel -->
+  <div id="carouselWithControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img src="Images/carousel/jawan.jpg" class="d-block mx-auto w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="Images/carousel/bool bhulaiya 3.jpg" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item active">
+        <img src="Images/carousel/kalki.jpg" class="d-block w-100" alt="Slide 3">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselWithControls" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselWithControls" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+    
+  <div class="main ">
+  
+    <div  class="d-flex m-2  justify-content-center align-items-center">
+      <h2  class=" text-light ">Bollywood</h2>
+    </div>
+  
+    <div class="movies container-fluid">
+  
+      <div class="movies-item ">
+        <img src="Images/drishyam.jpg" alt="">
+        <h5 class="Name">Drishyam</h5>
+    </div>
+
+    <div class="movies-item ">
+      <img src="Images/dhoni.jpg" alt="">
+      <h5>M.S.Dhoni</h5>
+    </div>
+
+    <div class="movies-item">
+        <img src="Images/chakde.jpg" alt="">
+        <h5>Chakde India</h5>
+      </div>
+
+    <div class="movies-item">
+      <img src="Images/wed.jpg" alt="">
+      <h5>Wednesday</h5>
+    </div>
+
+    <div class="movies-item">
+      <img src="Images/milkha.jpg" alt="">
+      <h5>Bhaag Milkha Bhaag</h5>
+    </div>
+
+    <div class="movies-item">
+      <img src="Images/criminal.jpg" alt="">
+      <h5>Criminal Justice</h5>
+    </div>
+
+    <div class="movies-item">
+        <img src="Images/kgf.jpg" alt="">
+        <h5>K.G.F Chapter 1</h5>
+      </div>
+
+    <div class="movies-item">
+      <img src="Images/mbbs.jpg" alt="">
+      <h5>Munna Bhai M.B.B.S</h5>
+    </div>
+
+    <div class="movies-item">
+      <img src="Images/war.jpg" alt="">
+      <h5>War</h5>
+    </div>   
+  
+    </div>
+  
+   
+  
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <hr class="w-90 mx-auto border border-secondary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <p class="contact-info">
+            Phone: +91 99999 99999<br>
+            Email: moviehub@website.com
+          </p>
+        </div>
+  
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <div class="quick-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+  
+        <div class="col-md-4">
+          <h5>Follow Us</h5>
+          <div class="socia-media">
+            <a href="#">Twitter</a>
+            <a href="#">Linkedin</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-light">
+      <div class="text-center">
+        <p>&copy; 2025 Movie Hub. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

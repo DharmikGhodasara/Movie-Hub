@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="js/signup.js">
+    
+    <script>
+        function DisplayResults() {
+        
+            const name = document.forms["signup_detail"]["name"].value;
+            const email = document.forms["signup_detail"]["email"].value;
+            const password = document.forms["signup_detail"]["password"].value;
+            const confirmPassword = document.forms["signup_detail"]["confirm_password"].value;
+            const errorMessageDiv = document.getElementById("errormessage");
+        
+            errorMessageDiv.innerHTML = ""; 
+        
+            if (name == "") {
+                errorMessageDiv.innerHTML += "<p>Please enter your name</p>";
+                return false; 
+            }
+        
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                errorMessageDiv.innerHTML += "<p>Please enter valid email</p>";
+                return false; 
+            } 
+        
+            const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+            if (!passwordPattern.test(password)) {
+                errorMessageDiv.innerHTML += "<p>Please enter valid Passworld</p>";
+                return false; 
+            }
+        
+            if (password != confirmPassword) {
+                errorMessageDiv.innerHTML += "<p>Passwords do not match</p>";
+                return false; 
+            }
+        
+            window.location.href = "login.html";
+            return false;
+        }
+        
+    </script>
+</head>
+<body>
+    <div class="sign-div">
+        <form class="sign" onsubmit="return DisplayResults()" name="signup_detail" autocomplete="off">
+          <h1 class="sign">Sign Up</h1>
+  
+            <div class="input-text">
+                <p>Name</p>
+                <input type="text" name="name" placeholder="Name" />
+            </div>
+
+            <div class="input-text">
+                <p>Email</p>
+                <input type="email" name="email" placeholder="Email" />
+            </div>
+    
+            <div class="input-text">
+                <p>Password</p>
+                <input id="pass_signup" type="password" name="password" placeholder="Password" />
+            </div>
+
+            <div class="input-text">
+                <p>Confirm Password</p>
+                <input id="conform_pass_signup" type="text" name="confirm_password" placeholder="Confirm Password" />
+            </div>
+    
+            <div id="errormessage"></div>
+    
+            <input class="signin-button" type="submit" value="Sign Up" />
+            
+            <div class="forget-password">
+                <a href="#">Forget password?</a>
+                <a href="login.html">Login?</a>
+            </div>
+        </form>
+      </div>
+</body>
+</html>
