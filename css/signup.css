@@ -1,0 +1,101 @@
+body {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.sign-div {
+    background-color: rgba(28, 28, 28, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+h1.sign {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff4757;
+}
+
+h1.sign:hover {
+    color: #e84118;
+}
+
+.input-text {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-text p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.input-text input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #363636;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.input-text input:focus {
+    border-color: #ff4757;
+    outline: none;
+}
+
+.field-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #363636;
+}
+
+.field-icon:hover {
+    color: #ff4757;
+}
+
+#errormessage {
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.signin-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.signin-button:hover {
+    background-color: #e84118;
+}
+
+.forget-password {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.forget-password a {
+    color: #ff4757;
+    text-decoration: none;
+}
+
+.forget-password a:hover {
+    text-decoration: underline;
+}
